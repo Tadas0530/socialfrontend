@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PostCategory } from 'src/app/common/post-category';
 import { PostService } from 'src/app/services/postservice.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-post-categories-list',
+  templateUrl: './post-categories-list.component.html',
+  styleUrls: ['./post-categories-list.component.css']
 })
-export class AppComponent {
-  title = 'SocialMedia';
+export class PostCategoriesListComponent implements OnInit {
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService,
+    private route: ActivatedRoute) { }
 
   postCategories: PostCategory[];
 

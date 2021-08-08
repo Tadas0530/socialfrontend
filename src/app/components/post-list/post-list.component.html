@@ -1,0 +1,29 @@
+<div class="post-container" *ngFor="let post of posts">
+  <div class="row">
+    <div class="col-sm-1 row-center">
+      <img class="profile-pic" src="assets/profilepic.png" />
+    </div>
+    <div class="col-sm-6 row-center">
+      <p>{{ post.author }}</p> > <p>  </p>
+    </div>
+    <div class="col-sm-3 push-to-right">
+      <p>Date: {{ post.dateCreated }}</p>
+      <p>Time: {{ post.timeCreated }}</p>
+    </div>
+    <div class="col-sm-2 row-center">
+      <button class="btn btn-secondary btn-danger">Settings</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 row-center">
+      <p>
+        {{ post.description }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <img class="post-img-size" src="{{ post.imageUrl }}" />
+    </div>
+  </div>
+</div>

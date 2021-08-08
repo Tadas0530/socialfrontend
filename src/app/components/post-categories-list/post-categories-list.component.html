@@ -1,0 +1,14 @@
+<div class="sidebar">
+  <h4>Categories</h4>
+  <ul>
+    <li *ngFor="let category of postCategories">
+      <a
+        routerLink="/category/{{ category.id }}"
+        routerLinkActive="active-link"
+      >
+        {{ category.categoryName }}
+      </a>
+    </li>
+  </ul>
+  <button class="btn btn-primary btn-success">Add a category</button>
+</div>
