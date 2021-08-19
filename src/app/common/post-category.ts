@@ -1,4 +1,8 @@
 export class PostCategory {
-    id: number;
-    categoryName: string;
+    public id: number;
+    
+
+    constructor(public categoryName: string) {
+
+    }
 }

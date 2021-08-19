@@ -1,5 +1,9 @@
+<!-- SIDE BAR -->
+  <app-post-categories-list></app-post-categories-list>
+
+
 <!-- NAV BAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <img class="app-logo" src="assets\socialapp.png" />
   <a class="navbar-brand" href="#">SocialApp</a>
   <button
@@ -11,6 +15,7 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
+  Explore
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,63 +35,32 @@
           <button type="button" class="au-btn-submit">Search</button>
         </div>
       </li>
+      <li class="post-text">
+        <button class="btn btn-primary">Login</button>
+      </li>
     </ul>
   </div>
 </nav>
 
-<!-- SIDE BAR -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2">
-      <app-post-categories-list></app-post-categories-list>
-    </div>
+<!-- SIDE BAR END -->
 
-    <!-- MAIN SECTION POSTS -->
-    <div class="col-sm-8">
-      <div
-        class="container create-post-container"
-        style="padding-left: 0; padding-right: 0"
-      >
-        <div class="row row-center">
-          <div class="col-sm-1">
-            <img class="profile-pic" src="assets/profilepic.png" />
-          </div>
-          <div class="col-sm-11">
-            <textarea
-              placeholder="What's on your mind?"
-              name="Text1"
-              cols="70"
-              rows="2"
-            ></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-1 row-bottom">
-            <button class="btn btn-parimary btn-success">POST</button>
-          </div>
-          <div class="col-sm-1 row-bottom2">
-            <select>
-              <option selected="true" *ngFor="let c of postCategories">
-                {{ c.categoryName }}
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="hr-section" />
-</div>
-<div class="container-fluid post-container-fluid">
+  <!-- MAIN SECTION POSTS -->
+<div class="main-content">
   <div class="row">
-    <div class="col-sm-2">PLACE HOLDER ER</div>
-    <div class="col-sm-8">
+    <app-post-input-box></app-post-input-box>
+  </div>
+
+<hr class="hr-section" />
+
+  <div class="row">
       <!-- POST ITSELF -->
 
-      <app-post-list></app-post-list>>
-      
+      <router-outlet></router-outlet>
 
       <!-- POST ITSELF END -->
     </div>
-  </div>
+
 </div>
+
+
+<footer class="pb-6"></footer>

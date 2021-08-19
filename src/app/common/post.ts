@@ -1,11 +1,12 @@
-import { PostCategory } from "./post-category";
 
 export class Post {
-    id: number;
-    author: string;
-    description: string;
-    imageUrl: string;
-    active: boolean;
-    dateCreated: Date;
-    timeCreated: Date;
+  id: number;
+
+  constructor(
+    public author: string,
+    public description: string,
+    public imageUrl: string,
+    public active: boolean,
+    public category: string
+  ) {}
 }

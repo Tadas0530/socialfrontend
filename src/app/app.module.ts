@@ -7,25 +7,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostCategoriesListComponent } from './components/post-categories-list/post-categories-list.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
+import { PostInputBoxComponent } from './components/post-input-box/post-input-box.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
-  //  { path: 'category/:id', component: PostListComponent },
-  //  { path: 'category', component: PostListComponent },
-  //  { path: 'posts', component: PostListComponent },
+   { path: 'category/:id', component: PostListComponent },
+   { path: 'category', component: PostListComponent },
+   { path: 'posts', component: PostListComponent },
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
-    PostCategoriesListComponent
+    PostCategoriesListComponent,
+    PostInputBoxComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule, 
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [PostService],

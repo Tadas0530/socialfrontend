@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostCategory } from 'src/app/common/post-category';
@@ -19,5 +20,11 @@ export class PostCategoriesListComponent implements OnInit {
     this.postService.getPostCategories().subscribe(
       data => { this.postCategories = data }
     );
+  }
+
+  category = new PostCategory("Fishing");
+
+  submitCategory() {
+    this.postService.addCategory(this.category).subscribe(data => console.log(this.category))
   }
 }
