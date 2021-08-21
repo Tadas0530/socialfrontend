@@ -1,0 +1,66 @@
+<!-- SIDE BAR -->
+<app-post-categories-list></app-post-categories-list>
+
+
+<!-- NAV BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <img class="app-logo" src="assets\socialapp.png" />
+  <a class="navbar-brand" href="#">SocialApp</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+  Explore
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li>
+        <div class="form-header">
+          <input
+            type="text"
+            placeholder="Search for posts..."
+            class="au-input au-input-xl center"
+          />
+          <button type="button" class="au-btn-submit">Search</button>
+        </div>
+      </li>
+      <li class="post-text">
+        <button class="btn btn-primary">Login</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- SIDE BAR END -->
+
+  <!-- MAIN SECTION POSTS -->
+<div class="main-content">
+  <div class="row">
+    <app-post-input-box></app-post-input-box>
+  </div>
+
+<hr class="hr-section" />
+
+  <div class="row">
+      <!-- POST ITSELF -->
+
+      <router-outlet></router-outlet>
+
+      <!-- POST ITSELF END -->
+    </div>
+
+</div>
+
+
+<footer class="pb-6"></footer>

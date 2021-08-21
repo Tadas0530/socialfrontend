@@ -18,7 +18,6 @@
 
 /* BODY */
 
-
 html body{
   background-color: #171717;
 }
@@ -161,7 +160,7 @@ body.modal-open {
   left: 10px;
   top: 10px;
   width: 50px;
-
+  border-radius: 10px;
 }
 
 /* CREATE A POST WINDOW END */
