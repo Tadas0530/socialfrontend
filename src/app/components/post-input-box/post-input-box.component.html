@@ -1,35 +1,75 @@
 <form #userPost="ngForm">
   <div class="create-post-container">
-    <img class="profile-pic" src="assets/profilepic.png" />
+    <img class="profile-pic" src="{{ currentUser.profilePic }}" />
+    <!-- MODAL FOR IMAGE CONTENTS -->
+    <h5 class="push-to-right">Posting to: {{ postingToCategory }} </h5>
+    <img class="create-post-image" src="{{ postImageUrl }}"/>
 
-    <button onclick="document.getElementById('getFile').click()" inputmode="file" class="btn btn-parimary btn-warning pic-upload">
-      UPLOAD A PICTURE<i class="fas fa-check" *ngIf="postImageUrl !== ''"></i>
-      <input type="file"
-      id="getFile" name="avatar"
-      accept="image/png, image/jpeg" style="display: none;">
-      </button
-    >>
 
-    <button onClick="window.location.reload();" class="btn btn-parimary btn-success post-button" (click)="onSubmit()">
-    POST</button
-    >>
-
-    <select class="category-selection" name="category" [(ngModel)]="postCategoryName">
-      <option selected="true" *ngFor="let c of postCategories">
-        {{ c.categoryName }}
-      </option>
-    </select>
-
-    <!-- Button trigger modal -->
     <button
       type="button"
       data-toggle="modal"
-      data-target="#exampleModalCenter"
+      data-target="#exampleModalCenter2"
+      class="btn btn-parimary btn-warning pic-upload"
     >
-    <input
-    class="post-input"
-    placeholder="Write something..."
-  />
+      UPLOAD A PICTURE<i class="fas fa-check" *ngIf="postImageUrl !== ''"></i>
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-h5">Upload an link to image</h5>
+          </div>
+          <div class="modal-body">
+            <!-- MODAL BODY -->
+
+            <input type="text" name="description" [(ngModel)]="postImageUrl">
+
+            <!-- MODAL END -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      (click)="resetValues()"
+      
+      class="btn btn-parimary btn-success post-button"
+    >
+      POST
+    </button>
+
+    <!-- MODAL FOR DESCRIPTION CONTENTS -->
+
+    <!-- Button trigger modal -->
+    <button data-toggle="modal" data-target="#exampleModalCenter">
+      <span
+      contenteditable="true"
+      style="
+        display: block;
+        background-color: white;
+        border: solid 1px white;
+        min-width: 200px;
+        max-width: 650px;
+      "
+      class="post-input"
+    >
+    {{ postDescription }}
+  </span>
     </button>
 
     <!-- Modal -->
@@ -44,35 +84,25 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 class="modal-h5">Create a post</h5>
           </div>
           <div class="modal-body">
+            <!-- MODAL BODY -->
 
-          <!-- MODAL BODY -->
-
-            <input type="text"
-            name="description"
-            >
+            <input type="text" name="description" [(ngModel)]="postDescription">
           
-          <!-- MODAL END -->
+
+            <!-- MODAL END -->
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-primary"
+              style="width: 50px"
               data-dismiss="modal"
             >
-              Close
+              Save
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>

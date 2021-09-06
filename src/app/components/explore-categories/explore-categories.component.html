@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="mb-4 wrap">
+    <div class="search">
+       <input (keyup.enter)="doSearch(myInput.value)" #myInput type="text" class=""  placeholder="Search...">
+       <button (click)="doSearch(myInput.value)" type="submit" class="">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ </div>
+  <div class="row">
+    <div *ngFor="let category of postCategories" class="col-sm-3">
+      <a routerLink="/category/{{ category.id }}">
+      <div class="category-box">
+        <div class="category-contents">
+          <img class="category-image" src="{{ category.categoryPicture }}" />
+          {{ category.categoryName }}
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>
+</div>

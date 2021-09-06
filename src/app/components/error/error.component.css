@@ -1,0 +1,26 @@
+.error-wrapper {
+    height:100vh;
+    background-image: url("https://wallpaperaccess.com/full/2154269.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+.error-text {
+    position: absolute;
+    top:40%;
+    left: 40%;
+    color: white;
+    font-size: 2.6cm;
+}
+
+.error-404 {
+    position: absolute;
+    top:20%;
+    left: 40%;
+    color: white;
+    font-size: 5cm;
+}

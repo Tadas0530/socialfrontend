@@ -1,0 +1,24 @@
+.modal-h5 {
+    text-align: center;
+    color: black;
+}
+
+.modal-input {
+    border-style: none;
+}
+
+.create-post-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 60%;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-indent: -10000px
+}
+
+.push-to-right {
+    position: absolute;
+    right: 15px;
+}

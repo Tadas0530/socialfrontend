@@ -1,0 +1,8 @@
+.post-list-wrapper {
+    position: relative;
+}
+
+.on-right {
+    position: absolute;
+    right: 1px;
+}

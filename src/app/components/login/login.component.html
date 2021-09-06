@@ -6,15 +6,17 @@
     <a class="a2" routerLink="/signup">
         <h3>Sign up</h3>
     </a>
-      <form>
+      <form #login="ngForm">
           <div class="credentials">
                 <h3><i class="fas fa-user"></i>Username</h3>
-                <input class="input-box mb-3" type="text">
+                <input name="username" class="input-box mb-3" type="text" [(ngModel)]="username">
                 <h3><i class="fas fa-key"></i>Password</h3>
-                <input class="input-box" type="text">
+                <input name="password" class="input-box" type="password" [(ngModel)]="password">
           </div>
       </form>
-    <button routerLink="" class="btn btn-primary btn-success btn-to-bottom">
+      <hr class="bottom-hr">
+      <a class="a3" routerLink="">Forgot password?</a>
+    <button (click)="handleLogin()" class="btn btn-success btn-to-bottom">
         SIGN IN
       </button>
   </div>

@@ -1,12 +1,10 @@
+import { PostService } from '../services/postservice.service';
+import { User } from './user';
 
 export class Post {
   id: number;
-
-  constructor(
-    public author: string,
-    public description: string,
-    public imageUrl: string,
-    public active: boolean,
-    public category: string
-  ) {}
+  category: string;
+  user: string;
+  userObject: User;
+  constructor(public description: string, public imageUrl: string) {}
 }

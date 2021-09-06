@@ -18,7 +18,7 @@
 
 /* BODY */
 
-html body{
+html body {
   background-color: #171717;
 }
 
@@ -29,7 +29,7 @@ html body{
   width: 3%;
   margin-right: 10px;
 }
-.navbar-color{
+.navbar-color {
   background-color: red;
 }
 
@@ -42,6 +42,8 @@ html body{
 /* NAV SIDEBAR */
 
 .sidebar {
+  animation-name: scale-up-hor-left;
+  animation-duration: 1s;
   position: fixed;
   position: relative;
   padding-top: 1%;
@@ -66,10 +68,10 @@ html body{
   list-style-type: none;
   text-align: center;
 }
- 
 
-.sidebar h4 {
+.sidebar h2, h5 {
   text-align: center;
+  color: white;
 }
 
 .sidebar-item a {
@@ -83,15 +85,14 @@ html body{
   width: 70%;
 }
 
-
 /* NAV SIDEBAR END */
 
 .category-link {
-  color: #EDEDED;
+  color: #ededed;
 }
 
 .category-link:hover {
-  color: #DA0037;
+  color: #da0037;
   /* animation-name: text-pop-up-top;
   animation-duration: 0.5s; */
 }
@@ -137,7 +138,7 @@ body.modal-open {
 
 .table-head {
   height: 2px;
-  color: #EDEDED;
+  color: #ededed;
 }
 
 .create-post-container {
@@ -145,7 +146,7 @@ body.modal-open {
   top: 15px;
   margin: 20px auto;
   min-height: 150px;
-  background-color:#444444;
+  background-color: #444444;
   border-radius: 15px;
   max-width: 1000px;
 }
@@ -178,21 +179,20 @@ body.modal-open {
   position: relative;
   background-color: red;
   height: auto;
-  background-color:#444444;
+  background-color: #444444;
   border-radius: 15px;
   margin: 20px auto;
   max-width: 1000px;
   margin-top: 50px;
 }
 
-
 .post-img-size {
   width: 100%;
   text-align: center;
   margin: auto;
   padding: 15px 0;
+  text-indent: -10000px
 }
-
 
 .post-text {
   color: white;
@@ -210,16 +210,20 @@ body.modal-open {
   left: 10px;
 }
 
-
 /* ACTUAL POST END */
 
 /* BUTTONS */
 
 .settings-btn {
-    display: inline-block;
-    position: absolute !important;
-    right: 15px !important;
-    top: 10px;
+  display: inline-block;
+  position: absolute !important;
+  right: 15px !important;
+  top: 10px;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 15px;
 }
 
 
@@ -228,10 +232,10 @@ body.modal-open {
 @media screen and (max-width: 1200px) {
   .sidebar {
     display: none;
-  }  
+  }
 
   .post-container {
-    width: 60%;
+    width: 80%;
   }
 
   .create-post-container {
@@ -245,7 +249,7 @@ body.modal-open {
 
 @media (min-width: 768px) and (max-width: 600px) {
   .collapse {
-      display: none !important;
+    display: none !important;
   }
 }
 
@@ -254,7 +258,8 @@ body.modal-open {
 @media screen and (max-width: 800px) {
   .sidebar {
     display: none;
-  }  
+  
+  }
 
   .post-container {
     width: 100%;
@@ -270,5 +275,36 @@ body.modal-open {
 
   .post-img-size {
     height: 80% !important;
+  }
+}
+
+/* ANIMATIONS */
+
+@-webkit-keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
   }
 }

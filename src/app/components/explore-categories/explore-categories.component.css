@@ -1,0 +1,29 @@
+.category-box {
+    background-color: #444444;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+}
+
+.category-box:hover {
+    background-color: red;
+}
+
+.category-image {
+    width: 40px;
+    border-radius: 15px;
+}
+
+.category-contents {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.search-bar {
+    border-radius: 10px;
+
+}
+

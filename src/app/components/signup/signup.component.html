@@ -10,14 +10,17 @@
       <form>
         <div class="credentials">
               <h3><i class="fas fa-user"></i>Username</h3>
-              <input class="input-box mb-3" type="text">
+              <input name="username" class="input-box mb-3" type="text" [(ngModel)]="username">
               <h3><i class="fas fa-key"></i>Password</h3>
-              <input class="input-box mb-3" type="text">
+              <input name="password1" class="input-box mb-3" type="password" [(ngModel)]="password1">
               <h3><i class="fas fa-redo"></i>Repeat password</h3>
-              <input class="input-box" type="text">
+              <input name="password2" class="input-box" type="password" [(ngModel)]="password2">
         </div>
     </form>
-      <button routerLink="" class="btn btn-primary btn-success btn-to-bottom">
+    <p *ngIf="!(password1 === password2)" style="color: red">Passwords do not match</p>
+    <hr class="bottom-hr">
+    <a class="a3" routerLink="">Already have an account?</a>
+      <button (click)="registerUser()" routerLink="" class="btn btn-primary btn-success btn-to-bottom">
           SIGN UP
         </button>
     </div>

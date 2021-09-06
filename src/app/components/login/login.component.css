@@ -4,7 +4,7 @@
     left: 50%;
     top: 50%;
     width: 500px;
-    height: 600px;
+    height: 450px;
     margin-left: -250px;
     /* -1/2 width */
     margin-top: -300px;
@@ -17,6 +17,7 @@
     background-size:cover;
     background-position:center;
     border-radius: 10px 10px 0 0;
+    filter: drop-shadow(.5rem .5rem 1rem black);
 }
 
 html, body {
@@ -70,6 +71,13 @@ html, body {
     text-decoration: none;
 }
 
+.login-box .a3 {
+    position: absolute;
+    text-decoration: none;
+    bottom: 40px;
+    left: 190px;
+}
+
 .credentials {
     position: absolute;
     top: 150px;
@@ -80,4 +88,12 @@ html, body {
     border-radius: 10px;
     opacity: 50%;
     width: 440px;
+}
+
+.bottom-hr {
+    position: relative;
+    top: 350px;
+    height: 3px;
+    width: 430px;
+    margin: auto;
 }

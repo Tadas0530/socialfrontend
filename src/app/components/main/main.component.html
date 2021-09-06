@@ -1,7 +1,6 @@
 <!-- SIDE BAR -->
 <app-post-categories-list></app-post-categories-list>
 
-
 <!-- NAV BAR -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <img class="app-logo" src="assets\socialapp.png" />
@@ -15,7 +14,7 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-  Explore
+    Explore
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,42 +24,44 @@
           >Home <span class="sr-only">(current)</span></a
         >
       </li>
-      <li>
-        <div class="form-header">
-          <input
-            type="text"
-            placeholder="Search for posts..."
-            class="au-input au-input-xl center"
-          />
-          <button type="button" class="au-btn-submit">Search</button>
-        </div>
-      </li>
-      <li class="post-text">
-        <button class="btn btn-primary">Login</button>
-      </li>
     </ul>
+
+    <button style="">
+      <h5 class="text-right">
+        <img
+          class="navbar-profile-picture"
+          src="{{ loggedInUser.profilePic }}"
+        />
+        {{ loggedInUser.username }}
+      </h5>
+    </button>
+    <button
+      (click)="logout()"
+      routerLink="/login"
+      class="logout-btn btn btn-primary btn-danger"
+    >
+      Logout
+    </button>
   </div>
 </nav>
 
 <!-- SIDE BAR END -->
 
-  <!-- MAIN SECTION POSTS -->
+<!-- MAIN SECTION POSTS -->
 <div class="main-content">
   <div class="row">
     <app-post-input-box></app-post-input-box>
   </div>
 
-<hr class="hr-section" />
+  <hr class="hr-section" />
 
   <div class="row">
-      <!-- POST ITSELF -->
+    <!-- POST ITSELF -->
 
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
-      <!-- POST ITSELF END -->
-    </div>
-
+    <!-- POST ITSELF END -->
+  </div>
 </div>
-
 
 <footer class="pb-6"></footer>
